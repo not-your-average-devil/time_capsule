@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:time_capsule/screens/Registration_page.dart';
 import 'package:time_capsule/utils/colors.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegistrationPage extends StatefulWidget {
+  const RegistrationPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegistrationPage> createState() => _RegistrationPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF3D3B40),
+      backgroundColor: AppColors.background,
       body: Column(
         children: [
           SizedBox(height: 100),
@@ -21,9 +20,9 @@ class _LoginPageState extends State<LoginPage> {
             child: Text(
               'Time Capsule',
               style: TextStyle(
+                color: Colors.white,
                 fontSize: 38,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
               ),
             ),
           ),
@@ -31,6 +30,20 @@ class _LoginPageState extends State<LoginPage> {
             child: Text(
               'A safe vault for your inner voice',
               style: TextStyle(color: Colors.white),
+            ),
+          ),
+          SizedBox(height: 30),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Name',
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
             ),
           ),
           SizedBox(height: 30),
@@ -53,8 +66,8 @@ class _LoginPageState extends State<LoginPage> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Password',
-                filled: true,
                 fillColor: Colors.white,
+                filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -69,41 +82,12 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 16),
-                  backgroundColor: Color(0xFF525CEB), // button color
-                ),
-                child: Text(
-                  'Login',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(height: 30),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 32),
-            child: SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RegistrationPage()),
-                  );
-                },
-                child: Text(
-                  'Not Register? Sign Up',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
-                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(vertical: 12),
                   backgroundColor: AppColors.primary,
                 ),
+                child: Text('Register', style: TextStyle(color: Colors.white)),
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 20),
-            child: Divider(color: Colors.grey, thickness: 1),
           ),
           SizedBox(height: 30),
           Padding(
@@ -116,14 +100,31 @@ class _LoginPageState extends State<LoginPage> {
                   padding: EdgeInsets.symmetric(vertical: 12),
                   backgroundColor: Colors.white,
                 ),
+                child: Text(
+                  'Already have an account? Login',
+                  style: TextStyle(color: AppColors.primary),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+            child: Divider(color: Colors.grey, thickness: 1),
+          ),
+          SizedBox(height: 3),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32),
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/google_icon.png', height: 24),
                     SizedBox(width: 12),
                     Text(
-                      'Login with Google',
+                      'Singup with google',
                       style: TextStyle(color: AppColors.primary),
                     ),
                   ],
