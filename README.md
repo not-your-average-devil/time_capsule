@@ -31,6 +31,10 @@ We live fast. Too fast to pause and check in with ourselves.
 
 > *(Coming Soon – UI is under construction. Designers welcome to contribute!)*
 
+📐 **Design Preview (Figma)**:  
+Check out the current UI/UX progress and contribute your design suggestions:  
+👉 [View Figma File](https://www.figma.com/design/bhaxgYf7n8gipMt9spnJNJ/Time-capsule-App-UI--Community-?node-id=10-76&t=fJcMgrGF1RcpIiep-1)
+
 ---
 
 ## 🧠 Tech Stack
@@ -74,6 +78,6 @@ If you're a:
    git clone https://github.com/your-username/time-capsule.git
    cd time-capsule
 
-  flutter pub get
+   flutter pub get
 
-  flutter run
+   flutter run
