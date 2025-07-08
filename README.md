@@ -41,6 +41,17 @@ We live fast. Too fast to pause and check in with ourselves.
     </td>
   </tr>
 </table>
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/0bbbd0ee-f8f3-4004-af27-7a6b6c8f28c6" />
+    </td>
+    <td width="50%">
+      <h3>📝SignUp</h3>
+    Register In no time
+    </td>
+  </tr>
+</table>
 
 📐 **Design Preview (Figma)**:  
 Check out the current UI/UX progress and contribute your design suggestions:  
