@@ -27,9 +27,20 @@ We live fast. Too fast to pause and check in with ourselves.
 
 ---
 
-## 📱 Screenshots
+## 🖥️ Screenshots
 
-> *(Coming Soon – UI is under construction. Designers welcome to contribute!)*
+<!-- LOGIN SECTION -->
+<table>
+  <tr>
+    <td width="50%">
+      <h3>📝 Login</h3>
+      Login or create a new account to get started in seconds. 
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/c429014b-53a8-40b4-89e7-9a10c2c73d47" alt="Signup Screen" width="250" />
+    </td>
+  </tr>
+</table>
 
 📐 **Design Preview (Figma)**:  
 Check out the current UI/UX progress and contribute your design suggestions:  
