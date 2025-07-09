@@ -14,6 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF3D3B40),
+      // named parameter body: to define the main content   
       body: Column(
         children: [
           SizedBox(height: 100),
@@ -82,12 +83,16 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(height: 30),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
+            // child: parameter is used to nest one widget in another 
             child: SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
+                  // Navigator.push adds Registrationpage to the top of the screen, old page is still underneath
                   Navigator.push(
+                    // context is the locaiton of the current widget in the location tree
                     context,
+                    // MaterialPageRoute is a predefined class in flutter that represents the page transition(default slide android trandition)
                     MaterialPageRoute(builder: (context) => RegistrationPage()),
                   );
                 },

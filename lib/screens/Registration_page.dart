@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_capsule/screens/Home_page.dart';
 import 'package:time_capsule/utils/colors.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -80,7 +81,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
             child: SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomePage()));
+                },
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 12),
                   backgroundColor: AppColors.primary,
