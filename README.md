@@ -61,12 +61,9 @@ Check out the current UI/UX progress and contribute your design suggestions:
 
 ## 🧠 Tech Stack
 
-- **Flutter** – For beautiful cross-platform UI
-- **Hive** – Lightweight NoSQL DB for local capsule storage
-- **Audio Recorder** – Native plugins for voice notes
-- **flutter_local_notifications** – Timely unlock alerts
-- **Riverpod** or **Provider** – State management (flexible)
-- **Intl** – Date formatting and scheduling
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ---
 
