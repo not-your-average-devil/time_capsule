@@ -5,7 +5,7 @@ import capsuleRoutes from './routes/capsule';
 const app = express();
 const PORT = 3000;
 
-app.use(express.json()); // so we can parse JSON in requests
+app.use(express.json()); 
 
 app.use('/capsules', capsuleRoutes); // register your capsule route
 

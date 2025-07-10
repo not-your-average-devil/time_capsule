@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF3D3B40),
-      // named parameter body: to define the main content   
+      // named parameter body: to define the main content     
       body: Column(
         children: [
           SizedBox(height: 100),
@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
               style: TextStyle(
                 fontSize: 38,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.white, 
               ),
             ),
           ),
