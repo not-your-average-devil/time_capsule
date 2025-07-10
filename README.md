@@ -103,3 +103,8 @@ If you're a:
    flutter pub get
 
    flutter run
+
+2. Start server:
+   ```bash
+   cd backend
+   npm run dev
