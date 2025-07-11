@@ -25,7 +25,7 @@ class _CapsulePage extends State<CapsulePage> {
   @override
   void initState() {
     super.initState();
-    _dateController.text = ''; // empty at start
+    _dateController.text = ''; 
   }
 
   @override
@@ -44,7 +44,7 @@ class _CapsulePage extends State<CapsulePage> {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Please enter both message and date")),
       );
-      return;
+      return; 
     }
 
     final url = Uri.parse(
