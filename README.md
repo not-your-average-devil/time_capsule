@@ -15,15 +15,15 @@ We live fast. Too fast to pause and check in with ourselves.
 
 ## 🌟 Core Features
 
-| Feature                    | Status    |
-|---------------------------|-----------|
-| Write text notes          | ✅ Done    |
-| Record voice messages     | ✅ Done    |
-| Lock capsule until future date | ✅ Done    |
-| Unlock notification       | ✅ Done    |
-| Local secure storage      | ✅ Done    |
-| Countdown to unlock       | ✅ Done    |
-| Offline-first             | ✅ Done    |
+| Feature                    |
+|---------------------------|
+| Write text notes          | 
+| Record voice messages     | 
+| Lock capsule until future date |
+| Unlock notification       | 
+| Local secure storage      | 
+| Countdown to unlock       |
+| Offline-first             | 
 
 ---
 
