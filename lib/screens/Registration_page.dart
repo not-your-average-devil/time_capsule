@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:time_capsule/screens/Home_page.dart';
 import 'package:time_capsule/utils/colors.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -10,6 +12,46 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrationPageState extends State<RegistrationPage> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  Future<void> _submitCreds() async {
+    final name = _nameController.text.trim();
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+
+    if (_nameController.text.isEmpty || _emailController.text.isEmpty || _passwordController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please fill all the fields.')),
+      );
+      return;
+    }
+
+    final url = Uri.parse('http://10.0.2.2:3000/register');
+
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({'name': name, 'email': email, 'password': password}),
+    );
+
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      // ScaffoldeMessenger is used to handle alerts popups etc
+      // .of(context) gives the context of the current page
+      // .showSnackBar shows a snakbar at the bottom of the screen
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('You have been registered successfully!')),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed with status code: ${response.statusCode}'),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +79,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
             child: TextField(
+              controller: _nameController,
               decoration: InputDecoration(
                 hintText: 'Name',
                 filled: true,
@@ -51,6 +94,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
             child: TextField(
+              controller: _emailController,
               decoration: InputDecoration(
                 hintText: 'Email',
                 filled: true,
@@ -65,6 +109,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
             child: TextField(
+              controller: _passwordController,
               decoration: InputDecoration(
                 hintText: 'Password',
                 fillColor: Colors.white,
@@ -73,6 +118,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
+              obscureText: true,
             ),
           ),
           SizedBox(height: 30),
@@ -81,10 +127,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
             child: SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomePage()));
-                },
+                onPressed: _submitCreds,
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 12),
                   backgroundColor: AppColors.primary,
